@@ -1,0 +1,102 @@
+/* Common Styles */
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+/* End of Common Styles */
+
+/* Slideshow */
+.slideshow-wrapper{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #000;
+}
+
+/* It actually affected the size of div enclosing images, and position set to absolute */
+.slide{ 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    transition: opacity 1s;
+}
+
+.slide img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    filter: saturate(1.5);
+    opacity: 0.6;
+}
+
+.arrows-visibility{
+    opacity: 0;
+}
+
+.control{
+    position: absolute;
+    top: 0;
+    width: 15vw;
+    height: 100%;
+    background-color: rgba(92,94,97,0.6);
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s linear;
+}
+
+.control:hover{
+    opacity: 1;
+}
+
+.left-arrow{
+    left: 0;
+}
+
+.right-arrow{
+    right: 0;
+}
+
+.line{
+    width: 0.2rem;
+    height: 10rem;
+    background-color: #ddd5d5;
+}
+
+.line-1{
+    transform: rotate(20deg) translateY(0.35rem);
+}
+
+.line-2{
+    transform: rotate(-20deg) translateY(-0.35rem);
+}
+
+.line-3{
+    transform: rotate(-20deg) translateY(0.35rem);
+}
+
+.line-4{
+    transform: rotate(20deg) translateY(-0.35rem);
+}
+
+.play-pause{
+    position: absolute;
+    bottom:5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.play-pause i{
+    color: #fff;
+    font-size: 3rem;
+}
+/* End of slidedhow */
+
